@@ -117,7 +117,7 @@
 #     print("Player A wins!")
 # else:
 #     print("Player B wins!")
-
+from operator import indexOf
 
 # a = 3
 # b = 2
@@ -481,18 +481,18 @@
 #     for j in range(10+1, 1, -1):
 #         print("x" * j, " " * int(g / 10), "x" * (10 - j))
 
-import time
-import os
-
-for g in range(1, 500):
-    for i in range(1, 11):
-        os.system('cls' if os.name == 'nt' else 'clear')
-        print("x" * i + " " * (g % 10) + "x" * (10 - i))
-        time.sleep(0.05)
-    for j in range(10, 0, -1):
-        os.system('cls' if os.name == 'nt' else 'clear')
-        print("x" * j + " " * (g % 10) + "x" * (10 - j))
-        time.sleep(0.05)
+# import time
+# import os
+#
+# for g in range(1, 500):
+#     for i in range(1, 11):
+#         os.system('cls' if os.name == 'nt' else 'clear')
+#         print("x" * i + " " * (g % 10) + "x" * (10 - i))
+#         time.sleep(0.05)
+#     for j in range(10, 0, -1):
+#         os.system('cls' if os.name == 'nt' else 'clear')
+#         print("x" * j + " " * (g % 10) + "x" * (10 - j))
+#         time.sleep(0.05)
 
 #
 # n = 5
@@ -502,3 +502,330 @@ for g in range(1, 500):
 #     for i in range(1, j + 1):
 #         soma = soma + (2 * i - 1)
 #     print(soma)
+
+# frutas = ["Abacaxi", "Banana", "Caqui", "Damasco", "Embaúba", "Figo", "Graviola"]
+# dados = ["Rafael", 34, True, "Pedro", "Ana", 1.78, 2001]
+#
+# print(frutas)
+# print(dados)
+#
+# print(list(range(10)))
+# print(list())
+# print(list(["Toyota", "Volkswagen", "Ford"]))
+#
+# unicamp = list("Unicamp")
+# print(unicamp)
+#
+# listaVazia = []
+# print(listaVazia)
+
+# x = list(2) 'int' object is not iterable
+# print(x)
+#
+# letras = ["A", "B", "C", "D", "E", "F", "G", "H"]
+# print(letras[0])
+# print(letras[1])
+# print(letras[4])
+#
+# print(letras[-1])
+# print(letras[-2])
+# print(letras[-3])
+# print(len(frutas))
+# print(frutas.__len__())
+
+# lista[start:stop:step]
+
+# print(letras[1:4:1])
+# print(letras[1:4])
+# print(letras[:3])
+# print(letras[-4:])
+# print(letras[-4::1])
+# print(letras[::2])
+# print(letras[:10:])
+# print(letras[9::])
+# print(letras[-10::])
+# print(letras[1::2])
+# print(letras[::-1])
+
+# empresas = ["Apple", "Samsung", "Microsoft", "Google", "OpenAI"]
+# empresas[2] = "Meta"
+#
+#
+# print(empresas)
+
+# lista = [0, 1, 2, 3, 4, 5]
+# print(lista)
+# lista[2:4] = ["A", "B"]
+# print(lista)
+#
+# lista = [0, 1, 2, 3, 4, 5]
+# print(lista)
+# lista[2:4] = [8, 8, 8]
+# print(lista)
+
+# letras = list("ABCDEF")
+# numeros = list(range(6))
+#
+# print(letras)
+# print(numeros)
+#
+# letras[2:4], numeros[2:4] = numeros[2:4], letras[2:4]
+# print(letras)
+# print(numeros)
+#
+# x = 0
+# y = 1
+# print(x, y)
+# x, y = y, x
+# print(x, y)
+#
+# lista = [0, 1, 2, 3, 4, 5]
+# print(lista)
+# lista[4:6] = []
+# print(lista)
+
+# top5 = ["Black Mirror", "Breaking Bad", "Friends", "Game of Thrones", "The Big Bang Theory"]
+# print("House MD" in top5)
+# print("Game of Thrones" in top5)
+
+# animais = []
+# animais.append("Gato")
+# print(animais)
+# animais.append("Cachorro")
+# print(animais)
+#
+# frutas = ["Abacaxi", "Banana", "Damasco"]
+# frutas.insert(2, "Caqui")
+# frutas.insert(len(frutas), "Manga")
+#
+# print(frutas)
+
+# n = int(input("Quantos númoeros serão lidos? "))
+# lista = []
+# for i in range(n):
+#     lista.append(int(input()))
+# x = int(input("Qual o número a procurar? "))
+# if x in lista:
+#     print(x, "pertence à lista")
+# else:
+#     print(x, "não pertence à lista")
+
+# lista = []
+#
+# keep = True
+#
+# while keep:
+#     number = int(input("Enter a number: "))
+#     if number >= 0:
+#         lista.append(number)
+#     else:
+#         keep = False
+# print(lista)
+# print("Fim do programa!")
+
+lista = []
+
+# keep = True
+
+# while True:
+#     number = int(input("Enter a number: "))
+#     if number >= 0:
+#         lista.append(number)
+#     else:
+#         break
+# print(lista)
+# print("Fim do programa!")
+
+# cinema = ["Sony Pictures", "Walt Disney", "Universal Pictures", "Warner"]
+# if "Disney" in cinema:
+#     print(cinema.index("Disney"))
+# else:
+#     print("Disney não está na lista.")
+
+# paises = ["Argentina", "Brasil", "Canadá", "Dinamarca"]
+# paises.remove("Argentina")
+# print(paises)
+#
+# if "Dinamarca" in paises:
+#     paises.remove("Dinamarca")
+# else:
+#     print("Dinamarca não está em países!")
+# print(paises)
+#
+# print(paises.pop(1))
+# print(paises)
+#
+# mentos = ["Morango", "Laranja", "Menta", "Banana"]
+# x = mentos.pop(1)
+# print(x)
+# print(mentos)
+#
+# paises = ["Brasil", "brasil", "Brazil", "Brasil"]
+#
+# print(paises.count("brazil"))
+
+# n = int(input("Quantos números lidos? "))
+#
+# lista = []
+# for i in range(n):
+#     lista.append(int(input()))
+#
+# x = int(input("Qual o número deve removido? "))
+# c = lista.count(x)
+# for i in range(c):
+#     lista.remove(x)
+#
+# print(lista)
+
+# n = int(input("Quantos números serão lidos? "))
+#
+# lista = [int(input()) for i in range(n)]
+#
+# x = int(input("Qual o número deve ser removido? "))
+#
+# lista = [i for i in lista if i != x]
+#
+# print(lista)
+
+# semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+# print(semana)
+#
+# semana.reverse()
+#
+# print(semana)
+
+# a = [5, 3, 1, 4, 2, 6]
+# a.sort()
+# print(a)
+#
+# a.reverse()
+# print(a)
+#
+# a.sort(reverse = True)
+# print(a)
+
+# a = [5, 3, 1, 4, 2, 6]
+# b = sorted(a)
+# b.reverse()
+# print(sorted(a)[::-1])
+# print(a)
+
+
+# a = [1]
+# b = a
+# b.append(2)
+# c = b
+#
+# c.append(3)
+# print(a)
+
+
+# a = [1]
+# b = a.copy()
+# b.append(2)
+# c = b.copy()
+# c.append(3)
+# print(a)
+# print(b)
+# print(c)
+
+# a = [1]
+# b = a[:]
+# b.append(2)
+# c = list(b)
+# c.append(3)
+# print(a)
+# print(b)
+# print(c)
+
+
+# a = [1]
+# b = a[:]
+# b.append(2)
+# c = list(b)
+# c.append(3)
+# print(a)
+# print(b)
+# print(c)
+
+# a = [1, 2]
+# b = [3, 4]
+# c = [5, 6]
+# print(a + b + c)
+#
+# print(c + b + a)
+#
+# print( b + c + a)
+
+# a = [1]
+# b = a + [2]
+# print(a)
+# print(b)
+
+# numeros = [2.14, 5.32, 2.45, 1.43, 3.27]
+# print(min(numeros))
+#
+# print(max(numeros))
+#
+# print(sum(numeros))
+#
+# vingadores = ["Homem de Ferro", "Capitão América", "Thor", "Hulk", "Viúva Negra", "Gavião Arqueiro"]
+# print(vingadores)
+# vingadores.append("Homem Aranha")
+# print(vingadores)
+#
+# if "Thor" in vingadores:
+#     print(vingadores.index("Thor"))
+#
+# vingadores.remove("Viúva Negra")
+# vingadores.remove("Homem de Ferro")
+#
+# print(vingadores)
+
+# v1 = []
+# v2 = []
+#
+# n = 12345678
+
+
+# l1 = [7, 2, 9]
+# l2 = [2, 5, 1, 3]
+# l3 = l1 + l2
+#
+# l3.sort()
+# print(l3)
+#
+# l3.reverse()
+# print(l3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
